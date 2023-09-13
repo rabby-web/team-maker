@@ -2,16 +2,19 @@
     display: flex;
     justify-content: space-around;
 }
+.calculate-container{
+    width: 20%;
+}
 .team-cart{
-    width: 250px;
+    max-width: 350px;
     height: auto;
     border: 2px solid purple;
     text-align: center;
     color: white;
 }
 .team-container{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
 }
 .card-body{
@@ -19,6 +22,18 @@
     justify-content: space-around;
     align-items: center;
 }
+.card-img img{
+    border-radius: 100%;
+    margin: 0.5rem;
+}
+/*  */
+@media (min-width: 300px) and (max-width: 900px) {
+    .team-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+  }
 .btn-cart{ 
       background-color: #EA4C89;
       border-radius: 8px;
