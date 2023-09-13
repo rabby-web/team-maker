@@ -1,0 +1,53 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+.team-cart{
+    width: 250px;
+    height: auto;
+    border: 2px solid purple;
+    text-align: center;
+    color: white;
+}
+.team-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.card-body{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.btn-cart{ 
+      background-color: #EA4C89;
+      border-radius: 8px;
+      border-style: none;
+      box-sizing: border-box;
+      color: #FFFFFF;
+      cursor: pointer;
+      display: inline-block;
+      font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      height: 40px;
+      line-height: 20px;
+      list-style: none;
+      margin: 5px;
+      outline: none;
+      padding: 10px 16px;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      transition: color 100ms;
+      vertical-align: baseline;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+    
+    .button-1:hover,
+    .button-1:focus {
+      background-color: #da88a7;
+    }
+
