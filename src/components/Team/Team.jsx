@@ -6,12 +6,36 @@ import { useEffect } from "react";
 
 const Team = () => {
     const [allActor, setAllActor] = useState([])
+    const [selectedActors, setSelectedActors] = useState([]);
+    const [remaining, setRemaining] = useState(0)
+    const [totalCost, setTotalCost] = useState(0);
     useEffect(() =>{
         fetch('data.json')
         .then(res => res.json())
         .then(data => setAllActor(data))
     },[])
     console.log(allActor)
+    const handleSelectCart = actor =>{
+        const isExist = selectedActors.find(item => item.id == actor.id);
+        let cost = actor.salary;
+        if(isExist){
+            return alert("Same card add")
+        }
+        else{
+            selectedActors.forEach(item => {
+                cost = cost + item.salary;
+            })
+            const remaining = 20000 -cost;
+            if(cost > 20000){
+                return alert("budget corse")
+            }
+            else{
+                setRemaining(remaining)
+                setTotalCost(cost)
+                setSelectedActors([...selectedActors,actor])
+            }
+        }
+    }
 
     return (
         <div className="container">
@@ -32,14 +56,14 @@ const Team = () => {
                         </div>
                         <div><h3>{actor.role}</h3></div>
                     </div>
-                    <button className="btn-cart">Select</button>
+                    <button onClick={()=> handleSelectCart(actor)} className="btn-cart">Select</button>
                 </div>
                     ))
                 }
             </div>
             {/* calculate container */}
             <div className="calculate-container">
-                <Cart></Cart>
+                <Cart totalCost={totalCost} remaining={remaining} selectedActors={selectedActors}></Cart>
             </div>
         </div>
     );
