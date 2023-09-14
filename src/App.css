@@ -1,6 +1,8 @@
 body{
-  margin: 1rem 5rem;
-  background: rgb(126,120,227);
-  background: linear-gradient(90deg, rgba(126,120,227,0.5568445475638051) 0%, rgba(141,39,193,1) 0%, rgba(52,52,163,1) 49%, rgba(6,124,148,1) 100%);
+ background-image: url('./assets/13077.jpg');
+ background-repeat: no-repeat;
+ background-blend-mode: overlay;
+    background-position: center;
+    background-size: cover;
   
 }

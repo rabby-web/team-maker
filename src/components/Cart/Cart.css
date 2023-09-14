@@ -1,0 +1,8 @@
+.card-style{
+    color: tomato;
+    font-weight: 700;
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid salmon;
+    background-color: rgba(250, 128, 114, 0.164);
+}
